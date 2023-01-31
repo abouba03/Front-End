@@ -1,0 +1,306 @@
+.App {
+  margin-top: 5em;
+}
+
+/* Header Style */
+header {
+  top: 0; left: 0; right: 0;
+  background: #0e314f;
+  padding: 10px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  position: fixed;
+}
+
+header .logo {
+  width: 65px;
+}
+
+header .navbar ul li {
+  width: 10rem;
+  position: relative;
+  float: left;
+  font-size: 20px;
+  text-align: center;
+}
+
+header .navbar ul li a {
+  padding: 10px;
+  display: block;
+  opacity: 0.70;
+}
+
+header .navbar ul li a:hover {
+  opacity: 1;
+}
+
+header .navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  z-index: 2;
+  background: #0e314f;
+  display: none;
+  border-radius: 10px;
+}
+
+header .navbar ul li ul li {
+  width: 100%;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+header .navbar ul li ul li:hover {
+  background: #1b599065;
+}
+
+header .navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+  display: initial;
+  animation: appear .5s ease-in-out;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Section */
+section {
+  background-color: #0e314fac;
+}
+
+section .container {
+  width: auto;
+  max-width: 1000px;
+  backdrop-filter: blur(5px);
+  text-align: center;
+  letter-spacing: 1.5px;
+  padding: 3rem 1.5rem 1.5rem;
+  margin: auto;
+}
+
+section .container h1, p {
+  max-width: 1000px;
+  margin: auto;
+}
+
+section .container .flags {
+  margin-top: .8em;
+}
+
+section .container .flags img {
+  display: inline-block;
+  width: 50px;
+  margin: 0 5px;
+}
+
+/* Main */
+main {
+  width: 100%;
+  background-color: #0e314fac;
+  backdrop-filter: blur(5px);
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+main .container h1 {
+  max-width: 500px;
+  display: inline;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 5px;
+}
+
+main .main2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .container img {
+  display: inline;
+  height: auto;
+  width: 450px;
+  max-width: 100%;
+}
+
+/* Social Media Style */
+.social-component {
+  display: flex;
+  gap: 1em;
+  font-size: 150%;
+}
+
+/* Footer Style */
+footer {
+  background-color: #0e314f;
+  padding: 20px;
+}
+
+footer a, .social-component a {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+footer a:hover, .social-component a:hover {
+  opacity: 1;
+}
+
+footer .social-medias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  cursor: pointer;
+}
+
+footer .social-medias a {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 8px;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+footer p {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: rgb(197, 197, 197);
+}
+
+/* Animation */
+
+/* Sub-menu Animation */
+@keyframes appear {
+  0% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear-out {
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+  0% {
+    opacity: 1;
+  }
+}
+
+/* Flag Animation */
+@media (prefers-reduced-motion: no-preference) {
+  section .container .flags img {
+    /* animation: flag-spin infinite 20s linear; */
+  }
+}
+
+@keyframes flag-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Media Queries */
+@media(max-width: 860px){
+  header {
+    padding: 20px;
+    display: flex;
+  }
+
+  header label {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: #0e314f;
+    display: none;
+    animation: appear-out 1s ease-in-out;
+    border-top: 1px solid rgba(255, 0, 0, 0.637);
+  }
+
+  header .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+    animation: appear 1.5s ease;
+    border-radius: unset;
+  }
+
+  header .navbar ul li ul li {
+    background: #1b599065;
+  }
+
+  header .navbar ul li ul li:hover {
+    background: #1b5990;
+  }
+
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  
+  header .navbar ul li ul li ul li:hover {
+    background: #006bc884;
+  }
+
+  input:checked ~ .navbar, .navbar ul {
+    display: block;
+    animation: appear .5s ease-in-out;
+  }
+
+}
