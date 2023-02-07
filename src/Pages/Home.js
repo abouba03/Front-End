@@ -5,9 +5,11 @@ import NavBar from '../components/NavBar/NavBar';
 import Section from '../components/Section/Section';
 import SlideShow from '../components/Slide/Slide';
 
+
 function Home() {
   return (
     <div className="App">
+     
       <NavBar />
       <Section />
       <SlideShow />

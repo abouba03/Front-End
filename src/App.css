@@ -209,7 +209,24 @@ footer p {
   font-size: 13px;
   color: rgb(197, 197, 197);
 }
+/* Button Style */
+button {
+  font-size: 22px;
+  text-decoration: none;
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: #D5DFF2 ;
+  border-radius: 20px;
+  color: #333;
+  border: 0;
+  margin-top: 35px;
+}
 
+button:hover {
+  background: #333;
+  color: #D5DFF2;
+  transition: 0.5s ease-out;
+}
 /* Animation */
 
 /* Sub-menu Animation */

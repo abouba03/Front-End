@@ -1,8 +1,10 @@
+import CustomButton from "./components/Button/Button";
 import Routers from "./Routes/Route";
 
 function App() {
   return (
-    <Routers />
+    <CustomButton buttonText="knrclr" />
+   // <Routers />
   );
 }
 

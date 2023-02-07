@@ -1,9 +1,15 @@
-import "./Button.css";
+import React, { Component } from 'react';
 
-const Button = () => {
-  return (
-    <button>Button</button>
-  )
+class CustomButton extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <button>{this.props.buttonText}</button>
+    );
+  }
 }
 
-export default Button
+export default CustomButton;
